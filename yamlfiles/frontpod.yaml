@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: alpenim
   labels:
-    app: erol
+    app: castello-front
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: erol
+      app: castello-front
   template:
     metadata:
       labels:
-        app: erol
+        app: castello-front
     spec:
       containers:
-      - name: safiyecon
-        image: safiye01/kuber:1.0
+      - name: castello
+        image: ahmetgrbzz/bookstore:1.0
         ports:
-        - containerPort: 80
+        - containerPort: 3000
